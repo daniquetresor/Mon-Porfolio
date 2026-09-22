@@ -12,7 +12,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-bg-elevated transition-colors duration-300 hover:border-border-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+      className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-bg-elevated transition-colors duration-300 hover:border-border-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden">
         <div className="h-full w-full transition-transform duration-500 ease-out group-hover:scale-[1.04]">
