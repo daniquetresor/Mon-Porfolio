@@ -49,12 +49,20 @@ export interface SkillCategory {
   skills: Skill[];
 }
 
+export interface CertificationBadge {
+  src: string;
+  label: string;
+}
+
 export interface Certification {
   name: string;
   organization: string;
+  /** ISO date (YYYY-MM-DD); formatted per-locale at render time. */
   date?: string;
   credentialId?: string;
   link?: string;
+  certificateFile?: string;
+  badges?: CertificationBadge[];
 }
 
 export type ExperienceIcon = "education" | "work" | "cert" | "code" | "creative";

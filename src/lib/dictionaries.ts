@@ -170,7 +170,7 @@ const en: Dictionary = {
   certifications: {
     eyebrow: "Certifications",
     title: "Credentials.",
-    viewCredential: "View credential",
+    viewCredential: "View certificate",
   },
   projects: {
     eyebrow: "Projects",
