@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Aperture, Code2, Network, Radar, Server, ShieldCheck, Users, type LucideIcon } from "lucide-react";
 import type { Project } from "@/types";
 
@@ -11,7 +12,36 @@ const ICONS: Record<Project["cover"]["tone"], LucideIcon> = {
   creative: Aperture,
 };
 
-export default function ProjectCover({ tone }: { tone: Project["cover"]["tone"] }) {
+export default function ProjectCover({
+  tone,
+  image,
+  imageFit = "cover",
+  alt,
+  sizes = "(min-width: 1024px) 50vw, 100vw",
+  priority = false,
+}: {
+  tone: Project["cover"]["tone"];
+  image?: string;
+  imageFit?: "cover" | "contain";
+  alt?: string;
+  sizes?: string;
+  priority?: boolean;
+}) {
+  if (image) {
+    return (
+      <div className="relative h-full w-full overflow-hidden bg-bg-elevated">
+        <Image
+          src={image}
+          alt={alt ?? ""}
+          fill
+          sizes={sizes}
+          priority={priority}
+          className={imageFit === "contain" ? "object-contain" : "object-cover"}
+        />
+      </div>
+    );
+  }
+
   const Icon = ICONS[tone];
 
   return (

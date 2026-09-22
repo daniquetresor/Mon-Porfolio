@@ -25,6 +25,10 @@ export interface Project {
   featured?: boolean;
   cover: {
     tone: "network" | "cyber" | "system" | "soc" | "dev" | "community" | "creative";
+    image?: string;
+    imageFit?: "cover" | "contain";
+    /** "browser" wraps the case-study cover in a browser-chrome frame — only use for real webpage/app UI screenshots. */
+    frame?: "browser" | "none";
   };
   caseStudy?: {
     overview: LocalizedText;

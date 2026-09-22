@@ -30,7 +30,12 @@ export const projects: Project[] = [
       "Network Segmentation",
     ],
     featured: true,
-    cover: { tone: "network" },
+    cover: {
+      tone: "network",
+      image: "/images/projects/aje-multisite-network.png",
+      imageFit: "contain",
+      frame: "none",
+    },
     caseStudy: {
       overview: {
         en: "A simulated multisite network built to practice enterprise-grade design: several interconnected sites, each segmented internally and secured at the perimeter.",
@@ -139,7 +144,12 @@ export const projects: Project[] = [
       ],
     },
     technologies: ["Wazuh", "SIEM", "Log Monitoring", "Threat Detection", "Security Analysis"],
-    cover: { tone: "soc" },
+    cover: {
+      tone: "soc",
+      image: "/images/projects/wazuh-soc.png",
+      imageFit: "cover",
+      frame: "browser",
+    },
     caseStudy: {
       overview: {
         en: "A Wazuh-based monitoring lab used to understand how a SOC actually watches and reacts to what's happening across an environment.",
@@ -188,7 +198,12 @@ export const projects: Project[] = [
     },
     technologies: ["FastAPI", "MySQL", "Redis", "React", "Docker", "Kubernetes"],
     featured: true,
-    cover: { tone: "dev" },
+    cover: {
+      tone: "dev",
+      image: "/images/projects/cybernight.png",
+      imageFit: "cover",
+      frame: "browser",
+    },
     caseStudy: {
       overview: {
         en: "A SaaS project built to explore the intersection of cybersecurity, software development and infrastructure — designing, not just consuming, a secure product.",
@@ -240,7 +255,12 @@ export const projects: Project[] = [
     },
     technologies: ["Docker", "Kubernetes", "Containers", "Linux"],
     github: "https://github.com/daniquetresor/CONTENEURS_-_KUBERNETES.git",
-    cover: { tone: "system" },
+    cover: {
+      tone: "system",
+      image: "/images/projects/containers-kubernetes-lab.jpg",
+      imageFit: "contain",
+      frame: "none",
+    },
     caseStudy: {
       overview: {
         en: "A lab dedicated to containerization and orchestration, moving from standalone Docker containers to a Kubernetes-managed cluster.",
@@ -292,7 +312,12 @@ export const projects: Project[] = [
     github: undefined,
     live: "https://mr-l-adjoukrou.vercel.app/",
     featured: true,
-    cover: { tone: "creative" },
+    cover: {
+      tone: "creative",
+      image: "/images/projects/mr-ladjoukrou-studio.png",
+      imageFit: "contain",
+      frame: "none",
+    },
     caseStudy: {
       overview: {
         en: "An entrepreneurial venture co-founded to build a professional photography and audiovisual studio, with its own digital presence.",
@@ -340,7 +365,12 @@ export const projects: Project[] = [
     },
     technologies: ["FortiGate", "Firewall Policy", "Network Security", "VLAN"],
     github: "https://github.com/daniquetresor/LAB_PRATIQUE_SECURISATION_RESEAU_AVEC_FORTIGATE.git",
-    cover: { tone: "cyber" },
+    cover: {
+      tone: "cyber",
+      image: "/images/projects/fortigate-network-security-lab.jpg",
+      imageFit: "contain",
+      frame: "none",
+    },
     caseStudy: {
       overview: {
         en: "A focused lab practicing network security fundamentals on FortiGate, from firewall policy to traffic control.",
@@ -389,7 +419,12 @@ export const projects: Project[] = [
     technologies: ["EVE-NG", "Network Simulation", "Routing", "Infrastructure Design"],
     github:
       "https://github.com/daniquetresor/Simualtion-d-infrastructure-de-FinAcces-avec-EVE-NG.git",
-    cover: { tone: "network" },
+    cover: {
+      tone: "network",
+      image: "/images/projects/finacces-eve-ng-simulation.jpg",
+      imageFit: "cover",
+      frame: "none",
+    },
     caseStudy: {
       overview: {
         en: "A simulated company network, built end-to-end in EVE-NG around a fictional financial access business, FinAccès.",

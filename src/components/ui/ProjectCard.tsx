@@ -16,7 +16,13 @@ export default function ProjectCard({ project, index }: { project: Project; inde
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden">
         <div className="h-full w-full transition-transform duration-500 ease-out group-hover:scale-[1.04]">
-          <ProjectCover tone={project.cover.tone} />
+          <ProjectCover
+            tone={project.cover.tone}
+            image={project.cover.image}
+            imageFit={project.cover.imageFit}
+            alt={project.title}
+            sizes="(min-width: 768px) 50vw, 100vw"
+          />
         </div>
         <div className="absolute right-4 top-4 flex size-10 items-center justify-center rounded-full bg-bg/80 text-fg opacity-0 backdrop-blur transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 translate-x-2">
           <ArrowUpRight className="size-4" aria-hidden="true" />

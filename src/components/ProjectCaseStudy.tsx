@@ -102,9 +102,29 @@ export default function ProjectCaseStudy({
         </div>
 
         <Reveal delay={0.15} className="mt-14">
-          <BrowserFrame>
-            <ProjectCover tone={project.cover.tone} />
-          </BrowserFrame>
+          {project.cover.frame === "browser" ? (
+            <BrowserFrame>
+              <ProjectCover
+                tone={project.cover.tone}
+                image={project.cover.image}
+                imageFit={project.cover.imageFit}
+                alt={project.title}
+                sizes="(min-width: 1024px) 900px, 100vw"
+                priority
+              />
+            </BrowserFrame>
+          ) : (
+            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-border">
+              <ProjectCover
+                tone={project.cover.tone}
+                image={project.cover.image}
+                imageFit={project.cover.imageFit}
+                alt={project.title}
+                sizes="(min-width: 1024px) 900px, 100vw"
+                priority
+              />
+            </div>
+          )}
         </Reveal>
 
         <div className="mt-20 grid grid-cols-1 gap-16 lg:grid-cols-[220px_1fr]">
