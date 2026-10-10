@@ -2,7 +2,10 @@
   {
     "slug": "aje-multisite-network",
     "title": "AJE Multisite Network Infrastructure",
-    "categories": ["network", "cybersecurity"],
+    "categories": [
+      "network",
+      "cybersecurity"
+    ],
     "year": "2025",
     "summary": {
       "en": "Design, deployment and security hardening of a multisite network infrastructure, interconnecting several sites over a segmented, firewalled topology.",
@@ -18,7 +21,15 @@
         "Le travail a couvert la conception des VLAN, le routage inter-VLAN, la configuration du switching et du routage, ainsi que la sécurité périmétrique avec FortiGate, le tout construit et testé sous EVE-NG."
       ]
     },
-    "technologies": ["VLAN", "Inter-VLAN Routing", "FortiGate", "Switching", "Routing", "EVE-NG", "Network Segmentation"],
+    "technologies": [
+      "VLAN",
+      "Inter-VLAN Routing",
+      "FortiGate",
+      "Switching",
+      "Routing",
+      "EVE-NG",
+      "Network Segmentation"
+    ],
     "featured": true,
     "cover": {
       "tone": "network",
@@ -60,7 +71,10 @@
   {
     "slug": "hexatech-iam",
     "title": "HexaTech IAM",
-    "categories": ["cybersecurity", "systems"],
+    "categories": [
+      "cybersecurity",
+      "systems"
+    ],
     "year": "2025",
     "summary": {
       "en": "User account administration and hardening of a Windows Server environment — identity, access and endpoint security brought together.",
@@ -76,9 +90,19 @@
         "Il a combiné la gestion des comptes et groupes Active Directory avec la configuration DNS et GPO, en ajoutant FortiGate et UserLock avec MFA pour renforcer le contrôle d'accès."
       ]
     },
-    "technologies": ["Windows Server", "Active Directory", "DNS", "GPO", "FortiGate", "UserLock", "MFA"],
+    "technologies": [
+      "Windows Server",
+      "Active Directory",
+      "DNS",
+      "GPO",
+      "FortiGate",
+      "UserLock",
+      "MFA"
+    ],
     "featured": true,
-    "cover": { "tone": "system" },
+    "cover": {
+      "tone": "system"
+    },
     "caseStudy": {
       "overview": {
         "en": "An identity and access management setup built around Windows Server — from account provisioning to enforced multi-factor authentication.",
@@ -109,7 +133,10 @@
   {
     "slug": "wazuh-soc",
     "title": "Wazuh SOC",
-    "categories": ["cybersecurity", "soc"],
+    "categories": [
+      "cybersecurity",
+      "soc"
+    ],
     "year": "2025",
     "summary": {
       "en": "A SOC monitoring setup built around Wazuh — centralizing logs, detecting anomalies and practicing real threat analysis workflows.",
@@ -125,7 +152,13 @@
         "L'objectif était de pratiquer le quotidien d'un analyste SOC : surveiller les anomalies, trier les alertes et comprendre ce que les logs révèlent réellement sur l'état et la sécurité d'un système."
       ]
     },
-    "technologies": ["Wazuh", "SIEM", "Log Monitoring", "Threat Detection", "Security Analysis"],
+    "technologies": [
+      "Wazuh",
+      "SIEM",
+      "Log Monitoring",
+      "Threat Detection",
+      "Security Analysis"
+    ],
     "cover": {
       "tone": "soc",
       "image": "/images/projects/wazuh-soc.png",
@@ -162,7 +195,10 @@
   {
     "slug": "cybernight",
     "title": "CyberNight",
-    "categories": ["cybersecurity", "development"],
+    "categories": [
+      "cybersecurity",
+      "development"
+    ],
     "year": "2025",
     "summary": {
       "en": "A cybersecurity-oriented SaaS built end-to-end — the clearest example of where my security and development skills meet.",
@@ -178,7 +214,14 @@
         "Le backend tourne sur FastAPI avec MySQL et Redis, le frontend sur React, et toute la stack est conteneurisée avec Docker et orchestrée avec Kubernetes."
       ]
     },
-    "technologies": ["FastAPI", "MySQL", "Redis", "React", "Docker", "Kubernetes"],
+    "technologies": [
+      "FastAPI",
+      "MySQL",
+      "Redis",
+      "React",
+      "Docker",
+      "Kubernetes"
+    ],
     "featured": true,
     "cover": {
       "tone": "dev",
@@ -220,7 +263,10 @@
   {
     "slug": "containers-kubernetes-lab",
     "title": "Containers & Kubernetes Lab",
-    "categories": ["systems", "development"],
+    "categories": [
+      "systems",
+      "development"
+    ],
     "summary": {
       "en": "A hands-on lab exploring containerization and Kubernetes orchestration — from single containers to a working multi-service cluster.",
       "fr": "Un lab pratique explorant la conteneurisation et l'orchestration Kubernetes — des conteneurs isolés jusqu'à un cluster multi-services fonctionnel."
@@ -235,7 +281,12 @@
         "Couvre les fondamentaux de Docker, la construction d'images, et les concepts Kubernetes comme les pods, deployments et services."
       ]
     },
-    "technologies": ["Docker", "Kubernetes", "Containers", "Linux"],
+    "technologies": [
+      "Docker",
+      "Kubernetes",
+      "Containers",
+      "Linux"
+    ],
     "github": "https://github.com/daniquetresor/CONTENEURS_-_KUBERNETES.git",
     "cover": {
       "tone": "system",
@@ -273,8 +324,13 @@
   {
     "slug": "mr-ladjoukrou-studio",
     "title": "Mr L'Adjoukrou Studio",
-    "role": { "en": "Deputy CEO / Co-founder", "fr": "PDG adjoint / Co-fondateur" },
-    "categories": ["creative"],
+    "role": {
+      "en": "Deputy CEO / Co-founder",
+      "fr": "PDG adjoint / Co-fondateur"
+    },
+    "categories": [
+      "creative"
+    ],
     "year": "2026",
     "summary": {
       "en": "A creative studio I co-founded, specialized in photography and audiovisual production for weddings, traditional ceremonies, and brand content.",
@@ -290,7 +346,12 @@
         "Le studio couvre les mariages, la dot, les baptêmes, le reportage, le contenu de marque et la publicité — une autre dimension de mon profil, où créativité, entrepreneuriat et technologie se rencontrent."
       ]
     },
-    "technologies": ["Photography", "Videography", "Brand Content", "Web Presence"],
+    "technologies": [
+      "Photography",
+      "Videography",
+      "Brand Content",
+      "Web Presence"
+    ],
     "live": "https://mr-l-adjoukrou.vercel.app/",
     "featured": true,
     "cover": {
@@ -329,7 +390,10 @@
   {
     "slug": "fortigate-network-security-lab",
     "title": "FortiGate Network Security Lab",
-    "categories": ["network", "cybersecurity"],
+    "categories": [
+      "network",
+      "cybersecurity"
+    ],
     "summary": {
       "en": "A hands-on lab securing a network with FortiGate — firewall policy, traffic control and network protection put into practice.",
       "fr": "Un lab pratique de sécurisation réseau avec FortiGate — politique de pare-feu, contrôle du trafic et protection réseau mis en pratique."
@@ -344,7 +408,12 @@
         "Construit pour renforcer le volet sécurité de l'administration réseau, en complément du projet plus large AJE multisite."
       ]
     },
-    "technologies": ["FortiGate", "Firewall Policy", "Network Security", "VLAN"],
+    "technologies": [
+      "FortiGate",
+      "Firewall Policy",
+      "Network Security",
+      "VLAN"
+    ],
     "github": "https://github.com/daniquetresor/LAB_PRATIQUE_SECURISATION_RESEAU_AVEC_FORTIGATE.git",
     "cover": {
       "tone": "cyber",
@@ -382,7 +451,10 @@
   {
     "slug": "finacces-eve-ng-simulation",
     "title": "FinAccès Infrastructure Simulation",
-    "categories": ["network", "systems"],
+    "categories": [
+      "network",
+      "systems"
+    ],
     "summary": {
       "en": "A simulated infrastructure for a fictional financial access company, built and tested end-to-end in EVE-NG.",
       "fr": "Une infrastructure simulée pour une entreprise fictive d'accès financier, construite et testée de bout en bout sous EVE-NG."
@@ -397,7 +469,12 @@
         "Couvre la conception et le test d'une topologie réseau d'entreprise réaliste, de l'adressage au routage jusqu'à la structure globale."
       ]
     },
-    "technologies": ["EVE-NG", "Network Simulation", "Routing", "Infrastructure Design"],
+    "technologies": [
+      "EVE-NG",
+      "Network Simulation",
+      "Routing",
+      "Infrastructure Design"
+    ],
     "github": "https://github.com/daniquetresor/Simualtion-d-infrastructure-de-FinAcces-avec-EVE-NG.git",
     "cover": {
       "tone": "network",
@@ -430,6 +507,33 @@
         "en": "A fully simulated, documented company network — a concrete exercise in designing infrastructure from scratch rather than just configuring an existing one.",
         "fr": "Un réseau d'entreprise entièrement simulé et documenté — un exercice concret de conception d'infrastructure depuis zéro plutôt qu'une simple configuration de l'existant."
       }
+    }
+  },
+  {
+    "slug": "admin-test-project-delete-me",
+    "title": "Admin Test Project",
+    "categories": [
+      "development"
+    ],
+    "summary": {
+      "en": "Test project to verify admin CRUD.",
+      "fr": "Projet de test pour verifier le CRUD admin."
+    },
+    "description": {
+      "en": [
+        "Test paragraph."
+      ],
+      "fr": [
+        "Paragraphe de test."
+      ]
+    },
+    "technologies": [
+      "Test"
+    ],
+    "cover": {
+      "tone": "dev",
+      "imageFit": "cover",
+      "frame": "none"
     }
   }
 ]
