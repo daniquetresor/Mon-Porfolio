@@ -61,25 +61,6 @@ export async function POST(request: Request) {
     const transporter = getTransporter();
     const senderEmail = getSenderEmail();
 
-    await transporter.sendMail({
-      from: `"Portfolio Booking" <${senderEmail}>`,
-      to: site.email,
-      replyTo: email,
-      subject: `[Booking] New appointment request — ${name}`,
-      text: [
-        `New appointment request from the portfolio site.`,
-        ``,
-        `Name: ${name}`,
-        `Email: ${email}`,
-        `Type: ${typeLabel}`,
-        `Requested time: ${when}`,
-        ``,
-        message ? `Message:\n${message}` : `No message left.`,
-        ``,
-        `Reply to this email or contact ${name} directly at ${email} to confirm.`,
-      ].join("\n"),
-    });
-
     const confirmationText =
       locale === "fr"
         ? [
@@ -109,15 +90,35 @@ export async function POST(request: Request) {
             `Trésor Ossohou`,
           ].join("\n");
 
-    await transporter.sendMail({
-      from: `"Trésor Ossohou" <${senderEmail}>`,
-      to: email,
-      subject:
-        locale === "fr"
-          ? "Votre demande de rendez-vous — Trésor Ossohou"
-          : "Your appointment request — Trésor Ossohou",
-      text: confirmationText,
-    });
+    await Promise.all([
+      transporter.sendMail({
+        from: `"Portfolio Booking" <${senderEmail}>`,
+        to: site.email,
+        replyTo: email,
+        subject: `[Booking] New appointment request — ${name}`,
+        text: [
+          `New appointment request from the portfolio site.`,
+          ``,
+          `Name: ${name}`,
+          `Email: ${email}`,
+          `Type: ${typeLabel}`,
+          `Requested time: ${when}`,
+          ``,
+          message ? `Message:\n${message}` : `No message left.`,
+          ``,
+          `Reply to this email or contact ${name} directly at ${email} to confirm.`,
+        ].join("\n"),
+      }),
+      transporter.sendMail({
+        from: `"Trésor Ossohou" <${senderEmail}>`,
+        to: email,
+        subject:
+          locale === "fr"
+            ? "Votre demande de rendez-vous — Trésor Ossohou"
+            : "Your appointment request — Trésor Ossohou",
+        text: confirmationText,
+      }),
+    ]);
 
     return NextResponse.json({ success: true });
   } catch (error) {

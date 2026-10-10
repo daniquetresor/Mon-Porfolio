@@ -45,26 +45,6 @@ export async function POST(request: Request) {
     const transporter = getTransporter();
     const senderEmail = getSenderEmail();
 
-    await transporter.sendMail({
-      from: `"Portfolio Testimonial" <${senderEmail}>`,
-      to: site.email,
-      replyTo: email,
-      subject: `[Testimonial] New submission — ${name}`,
-      text: [
-        `New testimonial submitted on the portfolio site — review before publishing.`,
-        ``,
-        `Name: ${name}`,
-        `Email: ${email}`,
-        `Role / Company: ${roleLine}`,
-        `Rating: ${rating ? `${rating}/5` : "—"}`,
-        ``,
-        `Message:`,
-        message,
-        ``,
-        `To publish, add it to src/data/testimonials.ts.`,
-      ].join("\n"),
-    });
-
     const confirmationText =
       locale === "fr"
         ? [
@@ -88,15 +68,36 @@ export async function POST(request: Request) {
             `Trésor Ossohou`,
           ].join("\n");
 
-    await transporter.sendMail({
-      from: `"Trésor Ossohou" <${senderEmail}>`,
-      to: email,
-      subject:
-        locale === "fr"
-          ? "Merci pour votre témoignage — Trésor Ossohou"
-          : "Thanks for your testimonial — Trésor Ossohou",
-      text: confirmationText,
-    });
+    await Promise.all([
+      transporter.sendMail({
+        from: `"Portfolio Testimonial" <${senderEmail}>`,
+        to: site.email,
+        replyTo: email,
+        subject: `[Testimonial] New submission — ${name}`,
+        text: [
+          `New testimonial submitted on the portfolio site — review before publishing.`,
+          ``,
+          `Name: ${name}`,
+          `Email: ${email}`,
+          `Role / Company: ${roleLine}`,
+          `Rating: ${rating ? `${rating}/5` : "—"}`,
+          ``,
+          `Message:`,
+          message,
+          ``,
+          `To publish, add it to src/data/testimonials.ts.`,
+        ].join("\n"),
+      }),
+      transporter.sendMail({
+        from: `"Trésor Ossohou" <${senderEmail}>`,
+        to: email,
+        subject:
+          locale === "fr"
+            ? "Merci pour votre témoignage — Trésor Ossohou"
+            : "Thanks for your testimonial — Trésor Ossohou",
+        text: confirmationText,
+      }),
+    ]);
 
     return NextResponse.json({ success: true });
   } catch (error) {
