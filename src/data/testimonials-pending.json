@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "id": "01b7b332-8adf-4fc2-ade7-0ea3a7b1feb8",
+    "name": "Admin Flow Test",
+    "email": "daniquetresor@gmail.com",
+    "message": "Test complet du flux de moderation des temoignages.",
+    "rating": 5,
+    "submittedAt": "2026-10-10T14:09:51.315Z"
+  }
+]
