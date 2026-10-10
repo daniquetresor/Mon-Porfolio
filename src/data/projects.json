@@ -508,34 +508,5 @@
         "fr": "Un réseau d'entreprise entièrement simulé et documenté — un exercice concret de conception d'infrastructure depuis zéro plutôt qu'une simple configuration de l'existant."
       }
     }
-  },
-  {
-    "slug": "admin-test-project-delete-me",
-    "title": "Admin Test Project (Updated)",
-    "categories": [
-      "development",
-      "cybersecurity"
-    ],
-    "summary": {
-      "en": "Updated test project.",
-      "fr": "Projet de test mis a jour."
-    },
-    "description": {
-      "en": [
-        "Updated paragraph."
-      ],
-      "fr": [
-        "Paragraphe mis a jour."
-      ]
-    },
-    "technologies": [
-      "Test",
-      "Update"
-    ],
-    "cover": {
-      "tone": "dev",
-      "imageFit": "cover",
-      "frame": "none"
-    }
   }
 ]
