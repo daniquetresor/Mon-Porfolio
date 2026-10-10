@@ -10,7 +10,7 @@ export const site = {
   location: "Abidjan, Côte d'Ivoire",
   email: "daniquetresor@gmail.com",
   phones: ["+225 07 97 86 99 97", "+225 01 72 77 82 60"],
-  url: "https://tresor-ossohou.vercel.app",
+  url: "https://tresorossohou.site",
   description:
     "Master's student in Cybersecurity & Networks (ERIS) at ESATIC, working across network security, systems, development and creative digital projects.",
 } as const;
