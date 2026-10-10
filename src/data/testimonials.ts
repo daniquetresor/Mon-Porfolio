@@ -1,9 +1,9 @@
 import type { Testimonial } from "@/types";
+import testimonialsData from "./testimonials.json";
 
 /**
- * Published testimonials. New submissions arrive by email (see
- * src/app/api/testimonials/route.ts) for manual review before being
- * added here — nothing is auto-published to avoid spam/unmoderated
- * content going live on its own.
+ * Published testimonials. Managed from /admin (Testimonials tab) —
+ * approving a pending submission there appends it here via a commit.
+ * Nothing is auto-published from the public submission form.
  */
-export const testimonials: Testimonial[] = [];
+export const testimonials = testimonialsData as unknown as Testimonial[];

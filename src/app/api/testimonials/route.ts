@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
 import { testimonialSchema } from "@/lib/testimonial-schema";
 import { getTransporter, getSenderEmail, isMailerConfigured } from "@/lib/mailer";
+import { readJsonFile, writeJsonFile, isGithubConfigured } from "@/lib/github";
 import { site } from "@/data/site";
+import type { TestimonialSubmission } from "@/types";
 
 export async function POST(request: Request) {
   let body: unknown;
@@ -40,6 +42,34 @@ export async function POST(request: Request) {
   }
 
   const roleLine = [role, company].filter(Boolean).join(" at ") || "—";
+
+  // Best-effort: store the submission for the admin panel to moderate.
+  // Never blocks or fails the request if GitHub isn't configured/reachable —
+  // the email notification below is still the primary channel.
+  if (isGithubConfigured()) {
+    try {
+      const { data: pending } = await readJsonFile<TestimonialSubmission[]>(
+        "src/data/testimonials-pending.json"
+      );
+      const submission: TestimonialSubmission = {
+        id: crypto.randomUUID(),
+        name,
+        email,
+        ...(role ? { role } : {}),
+        ...(company ? { company } : {}),
+        message,
+        ...(rating ? { rating: rating as 1 | 2 | 3 | 4 | 5 } : {}),
+        submittedAt: new Date().toISOString(),
+      };
+      await writeJsonFile(
+        "src/data/testimonials-pending.json",
+        [...pending, submission],
+        `New testimonial submission from ${name}`
+      );
+    } catch (error) {
+      console.error("Failed to store testimonial submission for moderation", error);
+    }
+  }
 
   try {
     const transporter = getTransporter();

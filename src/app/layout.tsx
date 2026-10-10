@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { site } from "@/data/site";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 import { LanguageProvider } from "@/lib/i18n";
 import { ThemeProvider, THEME_INIT_SCRIPT } from "@/lib/theme";
 import PageTransition from "@/components/PageTransition";
@@ -80,9 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <LanguageProvider>
             <div className="grain" aria-hidden="true" />
             <PageTransition />
-            <Navbar />
-            <main className="flex-1">{children}</main>
-            <Footer />
+            {children}
           </LanguageProvider>
         </ThemeProvider>
       </body>

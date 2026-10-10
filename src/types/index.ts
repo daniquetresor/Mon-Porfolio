@@ -96,3 +96,15 @@ export interface Testimonial {
   /** ISO date (YYYY-MM-DD). */
   date?: string;
 }
+
+/** A testimonial awaiting moderation in the admin panel — includes the submitter's email, never shown publicly. */
+export interface TestimonialSubmission {
+  id: string;
+  name: string;
+  email: string;
+  role?: string;
+  company?: string;
+  message: string;
+  rating?: 1 | 2 | 3 | 4 | 5;
+  submittedAt: string;
+}
