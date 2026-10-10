@@ -4,6 +4,7 @@ import Skills from "@/components/sections/Skills";
 import Certifications from "@/components/sections/Certifications";
 import Projects from "@/components/sections/Projects";
 import Experience from "@/components/sections/Experience";
+import Testimonials from "@/components/sections/Testimonials";
 import CurrentlyExploring from "@/components/sections/CurrentlyExploring";
 import Contact from "@/components/sections/Contact";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Certifications />
       <Projects />
       <Experience />
+      <Testimonials />
       <CurrentlyExploring />
       <Contact />
     </>

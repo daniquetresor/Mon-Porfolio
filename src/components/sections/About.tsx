@@ -1,5 +1,6 @@
 "use client";
 
+import { Download } from "lucide-react";
 import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
 import Reveal, { RevealGroup, RevealItem } from "../ui/Reveal";
@@ -28,6 +29,17 @@ export default function About() {
                 </p>
               </Reveal>
             ))}
+
+            <Reveal delay={0.3}>
+              <a
+                href="/documents/tresor-ossohou-cv.pdf"
+                download
+                className="group mt-2 inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium text-fg transition-colors hover:border-accent hover:text-accent"
+              >
+                <Download className="size-4 transition-transform duration-300 group-hover:translate-y-0.5" />
+                {t.about.downloadCv}
+              </a>
+            </Reveal>
           </div>
 
           <RevealGroup className="grid grid-cols-1 gap-6 self-start border-t border-border pt-8 sm:grid-cols-2 lg:grid-cols-1 lg:border-t-0 lg:border-l lg:pl-10 lg:pt-0">

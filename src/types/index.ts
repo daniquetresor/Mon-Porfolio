@@ -85,3 +85,14 @@ export interface SocialLink {
   href: string;
   icon: "github" | "linkedin" | "mail" | "tiktok" | "phone";
 }
+
+export interface Testimonial {
+  name: string;
+  role?: string;
+  company?: string;
+  /** Shown verbatim as submitted — never auto-translated. */
+  message: string;
+  rating?: 1 | 2 | 3 | 4 | 5;
+  /** ISO date (YYYY-MM-DD). */
+  date?: string;
+}

@@ -7,6 +7,7 @@ export interface Dictionary {
     projects: string;
     skills: string;
     experience: string;
+    testimonials: string;
     contact: string;
     cta: string;
     openMenu: string;
@@ -25,6 +26,7 @@ export interface Dictionary {
     title: string;
     paragraphs: [string, string, string, string];
     facts: { label: string; value: string }[];
+    downloadCv: string;
   };
   skills: {
     eyebrow: string;
@@ -54,6 +56,32 @@ export interface Dictionary {
       disciplines: string[];
       body: string;
       goal: string;
+    };
+  };
+  testimonials: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    empty: string;
+    shareButton: string;
+    cancelButton: string;
+    form: {
+      name: string;
+      email: string;
+      role: string;
+      company: string;
+      message: string;
+      messagePlaceholder: string;
+      rating: string;
+      submit: string;
+      sending: string;
+      success: string;
+      errorGeneric: string;
+      errorUnavailable: string;
+      errorName: string;
+      errorEmail: string;
+      errorMessage: string;
+      privacyNote: string;
     };
   };
   exploring: {
@@ -126,6 +154,7 @@ const en: Dictionary = {
     projects: "Projects",
     skills: "Skills",
     experience: "Experience",
+    testimonials: "Testimonials",
     contact: "Contact",
     cta: "Let's work together",
     openMenu: "Open menu",
@@ -159,6 +188,7 @@ const en: Dictionary = {
       { label: "Also building", value: "Web products & digital tools" },
       { label: "Approach", value: "Learning → Building → Growing" },
     ],
+    downloadCv: "Download CV",
   },
   skills: {
     eyebrow: "Skills",
@@ -205,6 +235,33 @@ const en: Dictionary = {
       ],
       body: "From Bondoukou to ESATIC, from mathematics to cybersecurity, from learning to a work-study program and now to building projects — each step has added a new skill to my profile.",
       goal: "My goal: keep learning, building, and turning my ideas into real projects.",
+    },
+  },
+  testimonials: {
+    eyebrow: "Testimonials",
+    title: "What people say.",
+    description: "Feedback from people I've worked or collaborated with.",
+    empty: "No testimonials yet — be the first to share your experience working with me.",
+    shareButton: "Share your experience",
+    cancelButton: "Cancel",
+    form: {
+      name: "Name",
+      email: "Email",
+      role: "Role / Title",
+      company: "Company (optional)",
+      message: "Your testimonial",
+      messagePlaceholder: "Share your experience working with me...",
+      rating: "Rating",
+      submit: "Submit testimonial",
+      sending: "Sending...",
+      success: "Thank you! Your testimonial has been received and will appear here once reviewed.",
+      errorGeneric: "Something went wrong. Please try again, or email me directly.",
+      errorUnavailable:
+        "The testimonial form isn't fully configured yet. Please reach out directly by email in the meantime.",
+      errorName: "Please enter your name.",
+      errorEmail: "Please enter a valid email address.",
+      errorMessage: "Please share at least a few words.",
+      privacyNote: "Your email is only used to confirm your submission — it won't be shown publicly.",
     },
   },
   exploring: {
@@ -286,6 +343,7 @@ const fr: Dictionary = {
     projects: "Projets",
     skills: "Compétences",
     experience: "Parcours",
+    testimonials: "Témoignages",
     contact: "Contact",
     cta: "Travaillons ensemble",
     openMenu: "Ouvrir le menu",
@@ -324,6 +382,7 @@ const fr: Dictionary = {
       { label: "Je construis aussi", value: "Produits web & outils digitaux" },
       { label: "Approche", value: "Apprendre → Construire → Grandir" },
     ],
+    downloadCv: "Télécharger mon CV",
   },
   skills: {
     eyebrow: "Compétences",
@@ -370,6 +429,33 @@ const fr: Dictionary = {
       ],
       body: "De Bondoukou à l'ESATIC, des mathématiques à la cybersécurité, de l'apprentissage à l'alternance et aujourd'hui à la création de projets, chaque étape m'a permis d'ajouter une nouvelle compétence à mon profil.",
       goal: "Mon objectif : continuer à apprendre, construire et transformer mes idées en projets concrets.",
+    },
+  },
+  testimonials: {
+    eyebrow: "Témoignages",
+    title: "Ce qu'on dit de moi.",
+    description: "Les retours de personnes avec qui j'ai travaillé ou collaboré.",
+    empty: "Aucun témoignage pour le moment — soyez le premier à partager votre expérience avec moi.",
+    shareButton: "Partager votre expérience",
+    cancelButton: "Annuler",
+    form: {
+      name: "Nom",
+      email: "Email",
+      role: "Rôle / Titre",
+      company: "Entreprise (optionnel)",
+      message: "Votre témoignage",
+      messagePlaceholder: "Partagez votre expérience en travaillant avec moi...",
+      rating: "Note",
+      submit: "Envoyer le témoignage",
+      sending: "Envoi en cours...",
+      success: "Merci ! Votre témoignage a bien été reçu et apparaîtra ici après validation.",
+      errorGeneric: "Une erreur est survenue. Réessayez, ou écrivez-moi directement par email.",
+      errorUnavailable:
+        "Le formulaire de témoignage n'est pas encore pleinement configuré. En attendant, contactez-moi directement par email.",
+      errorName: "Merci d'indiquer votre nom.",
+      errorEmail: "Merci d'indiquer une adresse email valide.",
+      errorMessage: "Merci de partager au moins quelques mots.",
+      privacyNote: "Votre email sert uniquement à confirmer votre envoi — il ne sera jamais affiché publiquement.",
     },
   },
   exploring: {

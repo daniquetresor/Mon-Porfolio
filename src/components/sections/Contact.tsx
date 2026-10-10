@@ -19,7 +19,7 @@ export default function Contact() {
         <div className="relative overflow-hidden pb-16 text-center">
           <GhostWatermark text={t.contact.eyebrow} center />
           <div className="relative flex flex-col items-center">
-            <SectionLabel index="06" label={t.contact.eyebrow} className="justify-center" />
+            <SectionLabel index="07" label={t.contact.eyebrow} className="justify-center" />
 
             <Reveal delay={0.05} className="mt-8 flex justify-center">
               <span className="inline-flex items-center gap-2.5 rounded-full border border-border bg-bg-elevated px-4 py-2 font-mono text-xs uppercase tracking-[0.2em] text-fg-muted">
