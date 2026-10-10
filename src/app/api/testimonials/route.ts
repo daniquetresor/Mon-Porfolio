@@ -102,6 +102,7 @@ export async function POST(request: Request) {
       transporter.sendMail({
         from: `"Portfolio Testimonial" <${senderEmail}>`,
         to: site.email,
+        cc: "tresorossohou3@gmail.com",
         replyTo: email,
         subject: `[Testimonial] New submission — ${name}`,
         text: [
