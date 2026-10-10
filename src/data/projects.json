@@ -511,24 +511,26 @@
   },
   {
     "slug": "admin-test-project-delete-me",
-    "title": "Admin Test Project",
+    "title": "Admin Test Project (Updated)",
     "categories": [
-      "development"
+      "development",
+      "cybersecurity"
     ],
     "summary": {
-      "en": "Test project to verify admin CRUD.",
-      "fr": "Projet de test pour verifier le CRUD admin."
+      "en": "Updated test project.",
+      "fr": "Projet de test mis a jour."
     },
     "description": {
       "en": [
-        "Test paragraph."
+        "Updated paragraph."
       ],
       "fr": [
-        "Paragraphe de test."
+        "Paragraphe mis a jour."
       ]
     },
     "technologies": [
-      "Test"
+      "Test",
+      "Update"
     ],
     "cover": {
       "tone": "dev",
