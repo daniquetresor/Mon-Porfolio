@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { testimonialSchema } from "@/lib/testimonial-schema";
-import { getTransporter, getGmailUser, isMailerConfigured } from "@/lib/mailer";
+import { getTransporter, getSenderEmail, isMailerConfigured } from "@/lib/mailer";
 import { site } from "@/data/site";
 
 export async function POST(request: Request) {
@@ -43,10 +43,10 @@ export async function POST(request: Request) {
 
   try {
     const transporter = getTransporter();
-    const gmailUser = getGmailUser();
+    const senderEmail = getSenderEmail();
 
     await transporter.sendMail({
-      from: `"Portfolio Testimonial" <${gmailUser}>`,
+      from: `"Portfolio Testimonial" <${senderEmail}>`,
       to: site.email,
       replyTo: email,
       subject: `[Testimonial] New submission — ${name}`,
@@ -89,7 +89,7 @@ export async function POST(request: Request) {
           ].join("\n");
 
     await transporter.sendMail({
-      from: `"Trésor Ossohou" <${gmailUser}>`,
+      from: `"Trésor Ossohou" <${senderEmail}>`,
       to: email,
       subject:
         locale === "fr"
