@@ -120,3 +120,31 @@ body {
     scroll-behavior: auto;
   }
 }
+
+/* Print: drop chrome and decorative layers, keep readable content only. */
+@media print {
+  header,
+  footer,
+  .grain,
+  nav,
+  button,
+  a[href^="#"]::after {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+
+  * {
+    box-shadow: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
